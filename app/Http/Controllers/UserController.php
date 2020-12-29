@@ -6,9 +6,6 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
-use function PHPUnit\Framework\isEmpty;
-use function PHPUnit\Framework\isNull;
-
 class UserController extends Controller
 {
     public function list($id = null)
@@ -29,6 +26,7 @@ class UserController extends Controller
             return ['Result'    =>  'Saving Failed'];
         }
     }
+    
     public function update(Request $request, $id)
     {
         $user = User::find($id);
